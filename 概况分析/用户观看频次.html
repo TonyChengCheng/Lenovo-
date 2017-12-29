@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>观看用户频次</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/layui.css"  media="all">
+</head>
+<body>
+
+<div class="wrap">
+    <div class="left-content">
+        <div class="logo">
+            <img src="../image/logo.png" alt="">
+        </div>
+        <div class="list">
+            <div class="container">
+                <div class="leftsidebar_box">
+                    <div class="line"></div>
+                    <dl class="system_log">
+                        <dt>概况<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="../概况分析/概况分析.html">概括分析</a></dd>
+                        <dd><a href="../概况分析/用户观看频次.html">用户观看频次</a></dd>
+                        <dd><a href="../概况分析/新增用户趋势.html">新增用户分析</a></dd>
+                        <dd><a href="../概况分析/用户行为分析.html">用户行为分析</a></dd>
+                    </dl>
+
+                    <dl class="custom">
+                        <dt>实时数据分析<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="../概况分析/实时数据分析.html">实时数据分析</a></dd>
+                    </dl>
+
+                    <dl class="channel">
+                        <dt>内容分析<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="../内容分析/内容分析.html">内容分析</a></dd>
+                        <dd><a href="../内容分析/运营日报.html">运营日报</a></dd>
+                        <dd><a href="../用户分析/活动分析.html">活动分析</a></dd>
+                        <dd><a href="../内容分析/栏目分析.html">栏目分析</a></dd>
+                    </dl>
+
+                    <dl class="app">
+                        <dt>用户分析<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="../内容分析/用户标签.html">用户标签</a></dd>
+                        <dd><a href="#">用户分析</a></dd>
+                        <dd><a href="#">用户画像</a></dd>
+                        <dd><a href="#">用户留存分析</a></dd>
+                    </dl>
+
+                    <dl class="cloud">
+                        <dt>产品分析<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="../产品分析/产品分析.html">产品分析</a></dd>
+                    </dl>
+
+                    <dl class="syetem_management">
+                        <dt>数据预测<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="../数据预测/数据预测.html">数据预测</a></dd>
+                    </dl>
+
+                    <dl class="source">
+                        <dt>运营工具<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="#">漏斗分析</a></dd>
+                        <dd><a href="#">矩阵分析</a></dd>
+                        <dd><a href="#">自定义表格</a></dd>
+                    </dl>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="right-content">
+        <div class="header">
+            <div class="header-left">
+                <img src="../image/top.png" alt="">
+                <h3>概括分析</h3>
+            </div>
+            <div class="header-right">
+                <div class="login">
+                    <img class="login-img" src="../image/setting.png" alt="">
+                    <b class="login-span">EN</b>
+                    <b class="login-span">&nbsp;/&nbsp;</b>
+                    <b class="login-span">中文</b>
+                    <img src="../image/login.png" alt="">
+                    <span>admin...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mid-content">
+        <div class="basic-info">
+            <div class="basic-info-top">
+                <form class="c-info" action="">
+                    <label for="">用户昵称</label><input type="text">
+                    <label for="">手机号</label><input type="text">
+                    <label for="">LID</label><input type="text">
+                    终端设备<select name="" id="">
+                        <option value="">请选择</option>
+                        <option value="">联想</option>
+                    </select>
+                </form>
+            </div>
+            <div class="basic-info-bottom">
+                <form class="bottom-info" action="">
+                    <label for="">日期</label>
+                    <select name="">
+                        <option value="">选择</option>
+                    </select>  ~
+                    <select name="">
+                        <option value="">选择</option>
+                    </select>
+                    <label for="">日均观看频次</label>
+                    <select name="">
+                        <option value="">选择</option>
+                    </select>  ~
+                    <select name="">
+                        <option value="">选择</option>
+                    </select>
+                    <label for="">日均观看时长</label>
+                    <select name="">
+                        <option value="">选择</option>
+                    </select>  ~
+                    <select name="">
+                        <option value="">选择</option>
+                    </select>
+                    <button class="btn">查询</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="time-ana">
+            <div class="time-ana-title">
+                <div class="download-icon2">
+                    <a href="#">
+                        <img src="../image/xiazai.png" alt="">
+                    </a>
+                </div>
+                <p>用户观看频次、时长分析</p>
+            </div>
+
+            <div class="time-ana-content">
+                <table class="time-ana-table" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <td>序号</td>
+                            <td>用户昵称</td>
+                            <td>LID</td>
+                            <td>手机号</td>
+                            <td>终端设备</td>
+                            <td>日期</td>
+                            <td>日均观看频次</td>
+                            <td>日均观看时长</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>韩剧</td>
+                            <td>02171712841</td>
+                            <td>18911234567</td>
+                            <td>pad</td>
+                            <td>
+                                <p>2016/09/12 21:00</p>
+                                <p>2016/09/13 00:00</p>
+                            </td>
+                            <td>25min</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>韩剧</td>
+                            <td>02171712841</td>
+                            <td>18911234567</td>
+                            <td>pad</td>
+                            <td>
+                                2016/09/12 21:00<br>
+                                2016/09/13 00:00
+                            </td>
+                            <td>25min</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>韩剧</td>
+                            <td>02171712841</td>
+                            <td>18911234567</td>
+                            <td>pad</td>
+                            <td>
+                                <p>2016/09/12 21:00</p>
+                                <p>2016/09/13 00:00</p>
+                            </td>
+                            <td>25min</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>韩剧</td>
+                            <td>02171712841</td>
+                            <td>18911234567</td>
+                            <td>pad</td>
+                            <td>
+                                <p>2016/09/12 21:00</p>
+                                <p>2016/09/13 00:00</p>
+                            </td>
+                            <td>25min</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>韩剧</td>
+                            <td>02171712841</td>
+                            <td>18911234567</td>
+                            <td>pad</td>
+                            <td>
+                                <p>2016/09/12 21:00</p>
+                                <p>2016/09/13 00:00</p>
+                            </td>
+                            <td>25min</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>韩剧</td>
+                            <td>02171712841</td>
+                            <td>18911234567</td>
+                            <td>pad</td>
+                            <td>
+                                <p>2016/09/12 21:00</p>
+                                <p>2016/09/13 00:00</p>
+                            </td>
+                            <td>25min</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>韩剧</td>
+                            <td>02171712841</td>
+                            <td>18911234567</td>
+                            <td>pad</td>
+                            <td>
+                                <p>2016/09/12 21:00</p>
+                                <p>2016/09/13 00:00</p>
+                            </td>
+                            <td>25min</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>韩剧</td>
+                            <td>02171712841</td>
+                            <td>18911234567</td>
+                            <td>pad</td>
+                            <td>
+                                <p>2016/09/12 21:00</p>
+                                <p>2016/09/13 00:00</p>
+                            </td>
+                            <td>25min</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>韩剧</td>
+                            <td>02171712841</td>
+                            <td>18911234567</td>
+                            <td>pad</td>
+                            <td>
+                                <p>2016/09/12 21:00</p>
+                                <p>2016/09/13 00:00</p>
+                            </td>
+                            <td>25min</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>韩剧</td>
+                            <td>02171712841</td>
+                            <td>18911234567</td>
+                            <td>pad</td>
+                            <td>
+                                <p>2016/09/12 21:00</p>
+                                <p>2016/09/13 00:00</p>
+                            </td>
+                            <td>25min</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="demo7" class="fenye"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/layui.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+    var lh =$(document.body).height();
+    $(".left-content").css({
+        height:lh,
+    })
+    $(".time-ana-table thead tr td").eq(0).css({
+        width:"105px"
+    })
+
+    $(".time-ana-table tbody tr:odd").css({
+        background:"#fafafa"
+    })
+
+    $(".leftsidebar_box dt img").attr("src", "../image/xiala2.png");
+    $(function () {
+        $(".leftsidebar_box dd").hide();
+        $(".leftsidebar_box dt").click(function () {
+//                        $(".leftsidebar_box dd").css({"background":"#f0f4f8","color":"#36a0f7"})
+            $(this).css({"color": "black"})
+            $(this).parent().find('dd').removeClass("menu_chioce");
+            $(".leftsidebar_box dt img").attr("src", "../image/xiala2.png");
+            $(this).parent().find('img').attr("src", "../image/xiala2.png");
+            $(".menu_chioce").slideUp();
+            $(this).parent().find('dd').slideToggle();
+            $(this).parent().find('dd').addClass("menu_chioce");
+        });
+    })
+</script>
+<script>
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+                ,layer = layui.layer;
+        //完整功能
+        laypage.render({
+            elem: 'demo7'
+            ,count: 45
+            ,layout: ['count', 'limit','prev', 'page', 'next']
+            ,jump: function(obj){
+//                console.log(obj)
+                $(".layui-laypage-prev").css({
+                    background:'url("../image/zuo.png") no-repeat center'
+                })
+                $(".layui-laypage-next").css({
+                    background:'url("../image/you.png") no-repeat center'
+                })
+            }
+        });
+
+    });
+
+</script>
+</body>
+</html>

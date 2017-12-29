@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>数据预测</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+
+<div class="left-content">
+    <div class="logo">
+        <img src="../image/logo.png" alt="">
+    </div>
+    <div class="list">
+        <div class="container">
+            <div class="leftsidebar_box">
+                <div class="line"></div>
+                <dl class="system_log">
+                    <dt>概况<img src="../image/xiala2.png"></dt>
+                    <dd class="first_dd"><a href="../概况分析/概况分析.html">概括分析</a></dd>
+                    <dd><a href="../概况分析/用户观看频次.html">用户观看频次</a></dd>
+                    <dd><a href="../概况分析/新增用户趋势.html">新增用户分析</a></dd>
+                    <dd><a href="../概况分析/用户行为分析.html">用户行为分析</a></dd>
+                </dl>
+
+                <dl class="custom">
+                    <dt>实时数据分析<img src="../image/xiala2.png"></dt>
+                    <dd class="first_dd"><a href="../概况分析/实时数据分析.html">实时数据分析</a></dd>
+                </dl>
+
+                <dl class="channel">
+                    <dt>内容分析<img src="../image/xiala2.png"></dt>
+                    <dd class="first_dd"><a href="../内容分析/内容分析.html">内容分析</a></dd>
+                    <dd><a href="../内容分析/运营日报.html">运营日报</a></dd>
+                    <dd><a href="../用户分析/活动分析.html">活动分析</a></dd>
+                    <dd><a href="../内容分析/栏目分析.html">栏目分析</a></dd>
+                </dl>
+
+                <dl class="app">
+                    <dt>用户分析<img src="../image/xiala2.png"></dt>
+                    <dd class="first_dd"><a href="../内容分析/用户标签.html">用户标签</a></dd>
+                    <dd><a href="#">用户分析</a></dd>
+                    <dd><a href="#">用户画像</a></dd>
+                    <dd><a href="#">用户留存分析</a></dd>
+                </dl>
+
+                <dl class="cloud">
+                    <dt>产品分析<img src="../image/xiala2.png"></dt>
+                    <dd class="first_dd"><a href="../产品分析/产品分析.html">产品分析</a></dd>
+                </dl>
+
+                <dl class="syetem_management">
+                    <dt>数据预测<img src="../image/xiala2.png"></dt>
+                    <dd class="first_dd"><a href="../数据预测/数据预测.html">数据预测</a></dd>
+                </dl>
+
+                <dl class="source">
+                    <dt>运营工具<img src="../image/xiala2.png"></dt>
+                    <dd class="first_dd"><a href="#">漏斗分析</a></dd>
+                    <dd><a href="#">矩阵分析</a></dd>
+                    <dd><a href="#">自定义表格</a></dd>
+                </dl>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="right-content">
+    <div class="header">
+        <div class="header-left">
+            <img src="../image/bigdata.png" alt="">
+            <h3>数据预测</h3>
+        </div>
+        <div class="header-right">
+            <div class="login">
+                <img class="login-img" src="../image/setting.png" alt="">
+                <b class="login-span">EN</b>
+                <b class="login-span">&nbsp;/&nbsp;</b>
+                <b class="login-span">CH</b>
+                <img src="../image/login.png" alt="">
+                <span>admin...</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mid-content">
+    <div class="mid-first">
+        <div class="tim">
+            <div class="riqi"></div>
+            <form action="">终端
+                <select>
+                    <option value="">全部</option>
+                </select>
+            </form>
+        </div>
+    </div>
+    <div class="pre-data">
+        <div class="pre-data-title">
+            <div class="data-download">
+                <a href="#"><img src="../image/6_07.png" alt=""></a>
+                <a href="#"><img src="../image/6_10.png" alt=""></a>
+                <a href="#"> <img src="../image/6_13.png" alt=""></a>
+            </div>
+            <p>数据预测</p>
+        </div>
+        <div id="sjyc" class="pre-data-content"></div>
+    </div>
+    <div class="pre-data">
+        <div class="pre-data-title">
+            <div class="data-download">
+                <a href="#"><img src="../image/6_07.png" alt=""></a>
+                <a href="#"><img src="../image/6_10.png" alt=""></a>
+                <a href="#"> <img src="../image/6_13.png" alt=""></a>
+            </div>
+            <p>用户行为分析</p>
+        </div>
+        <div id="yhxwfx" class="pre-data-content"></div>
+    </div>
+</div>
+
+<script src="../js/ECharts.js"></script>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+    var lh = $(document.body).height();
+    $(".left-content").css({
+        height: lh,
+    })
+
+    $(".leftsidebar_box dt img").attr("src", "../image/xiala2.png");
+    $(function () {
+        $(".leftsidebar_box dd").hide();
+        $(".leftsidebar_box dt").click(function () {
+//                        $(".leftsidebar_box dd").css({"background":"#f0f4f8","color":"#36a0f7"})
+            $(this).css({"color": "black"})
+            $(this).parent().find('dd').removeClass("menu_chioce");
+            $(".leftsidebar_box dt img").attr("src", "../image/xiala2.png");
+            $(this).parent().find('img').attr("src", "../image/xiala2.png");
+            $(".menu_chioce").slideUp();
+            $(this).parent().find('dd').slideToggle();
+            $(this).parent().find('dd').addClass("menu_chioce");
+        });
+    })
+</script>
+<script type="text/javascript">
+    //数据预测折线图开始
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('sjyc'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis',
+            //axisPointer: {
+            // type: 'cross',
+            // label: {
+            //    backgroundColor: '#6a7985'
+            // }
+            // }
+        },
+        legend: {
+            top: 36,
+            itemGap: 62,
+            data: [{name: '新增用户', icon: 'emptyCircle'}, {name: '累计用户', icon: 'emptyCircle'}, {
+                name: '人均浏览量',
+                icon: 'emptyCircle'
+            }, {name: '人均点播量', icon: 'emptyCircle'}]
+        },
+        toolbox: {
+            show: false,
+            feature: {
+                dataView: {}
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '10%',
+            top: '30%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                axisLine: {show: false},
+                axisTick: {show: false},
+                offset: 20,
+                type: 'category',
+                boundaryGap: true,
+                data: ['2017/6/1', '2017/6/2', '2017/6/3', '2017/6/4', '2017/6/5', '2017/6/6', '2017/6/7', '2017/6/8', '2017/6/9', '2017/6/10', '2017/6/11', '2017/6/12', '2017/6/13', '2017/6/14']
+            }
+        ],
+        yAxis: [
+            {
+                axisLine: {show: false},
+                axisTick: {show: false},
+                offset: 6,
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '新增用户',
+                type: 'line',
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: '#80beff',
+                        lineStyle: {
+                            width: 3,
+                            color: '#80beff'
+                        }
+                    },
+                    emphasis: {
+                        color: {
+                            type: 'radial',
+                            x: 0.5,
+                            y: 0.5,
+                            r: 0.5,
+                            colorStops: [{
+                                offset: 0, color: '#80beff' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(128,190,255,0.25)' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+
+                },
+                data: [120, 132, 101, 134, 90, 230, 210, 132, 101, 134, 90, 230, 210, 189]
+            },
+            {
+                name: '累计用户',
+                type: 'line',
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: '#80beff',
+                        lineStyle: {
+                            width: 3,
+                            color: '#80beff'
+                        }
+                    },
+                    emphasis: {
+                        color: {
+                            type: 'radial',
+                            x: 0.5,
+                            y: 0.5,
+                            r: 0.5,
+                            colorStops: [{
+                                offset: 0, color: '#80beff' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(128,190,255,0.25)' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+
+                },
+                data: [125, 133, 108, 174, 190, 239, 219, 152, 181, 134, 180, 235, 219, 199]
+            },
+            {
+                name: '人均浏览量',
+                type: 'line',
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: '#cabaf7',
+                        lineStyle: {
+                            width: 3,
+                            color: '#cabaf7'
+                        }
+                    },
+                    emphasis: {
+                        color: {
+                            type: 'radial',
+                            x: 0.5,
+                            y: 0.5,
+                            r: 0.5,
+                            colorStops: [{
+                                offset: 0, color: '#cabaf7' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(202,186,247,0.25)' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+
+                },
+                data: [220, 182, 191, 234, 290, 330, 310, 182, 191, 234, 290, 330, 310, 176]
+            },
+            {
+                name: '人均点播量',
+                type: 'line',
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: '#f89fcc',
+                        lineStyle: {
+                            width: 3,
+                            color: '#f89fcc'
+                        }
+                    },
+                    emphasis: {
+                        color: {
+                            type: 'radial',
+                            x: 0.5,
+                            y: 0.5,
+                            r: 0.5,
+                            colorStops: [{
+                                offset: 0, color: '#f89fcc' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(248,159,204,0.25)' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+
+                },
+                data: [150, 232, 201, 154, 190, 330, 410, 232, 201, 154, 190, 330, 410, 113]
+            }
+        ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+    //数据预测折线图结束
+</script>
+<script type="text/javascript">
+    //用户行为分析折线图开始
+    // 基于准备好的dom，初始化echarts实例
+    var myChartyhxwfx = echarts.init(document.getElementById('yhxwfx'));
+
+    // 指定图表的配置项和数据
+    var optionyhxwfx = {
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis',
+            //axisPointer: {
+            // type: 'cross',
+            // label: {
+            //    backgroundColor: '#6a7985'
+            // }
+            // }
+        },
+        legend: {
+            top: 36,
+            itemGap: 62,
+            data: [{name: '启动次数', icon: 'emptyCircle'}, {name: '单次使用时长', icon: 'emptyCircle'}, {
+                name: '人均启动次数',
+                icon: 'emptyCircle'
+            }, {name: '续费用户数', icon: 'emptyCircle'}]
+        },
+        toolbox: {
+            show: false,
+            feature: {
+                dataView: {}
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '10%',
+            top: '30%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                axisLine: {show: false},
+                axisTick: {show: false},
+                offset: 20,
+                type: 'category',
+                boundaryGap: true,
+                data: ['2017/6/1', '2017/6/2', '2017/6/3', '2017/6/4', '2017/6/5', '2017/6/6', '2017/6/7', '2017/6/8', '2017/6/9', '2017/6/10', '2017/6/11', '2017/6/12', '2017/6/13', '2017/6/14']
+            }
+        ],
+        yAxis: [
+            {
+                axisLine: {show: false},
+                axisTick: {show: false},
+                offset: 6,
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '启动次数',
+                type: 'line',
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: '#80beff',
+                        lineStyle: {
+                            width: 3,
+                            color: '#80beff'
+                        }
+                    },
+                    emphasis: {
+                        color: {
+                            type: 'radial',
+                            x: 0.5,
+                            y: 0.5,
+                            r: 0.5,
+                            colorStops: [{
+                                offset: 0, color: '#80beff' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(128,190,255,0.25)' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+
+                },
+                data: [120, 132, 101, 134, 90, 230, 210, 132, 101, 134, 90, 230, 210, 189]
+            },
+            {
+                name: '单次使用时长',
+                type: 'line',
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: '#80beff',
+                        lineStyle: {
+                            width: 3,
+                            color: '#80beff'
+                        }
+                    },
+                    emphasis: {
+                        color: {
+                            type: 'radial',
+                            x: 0.5,
+                            y: 0.5,
+                            r: 0.5,
+                            colorStops: [{
+                                offset: 0, color: '#80beff' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(128,190,255,0.25)' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+
+                },
+                data: [125, 133, 108, 174, 190, 239, 219, 152, 181, 134, 180, 235, 219, 199]
+            },
+            {
+                name: '人均启动次数',
+                type: 'line',
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: '#cabaf7',
+                        lineStyle: {
+                            width: 3,
+                            color: '#cabaf7'
+                        }
+                    },
+                    emphasis: {
+                        color: {
+                            type: 'radial',
+                            x: 0.5,
+                            y: 0.5,
+                            r: 0.5,
+                            colorStops: [{
+                                offset: 0, color: '#cabaf7' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(202,186,247,0.25)' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+
+                },
+                data: [220, 182, 191, 234, 290, 330, 310, 182, 191, 234, 290, 330, 310, 176]
+            },
+            {
+                name: '续费用户数',
+                type: 'line',
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: '#f89fcc',
+                        lineStyle: {
+                            width: 3,
+                            color: '#f89fcc'
+                        }
+                    },
+                    emphasis: {
+                        color: {
+                            type: 'radial',
+                            x: 0.5,
+                            y: 0.5,
+                            r: 0.5,
+                            colorStops: [{
+                                offset: 0, color: '#f89fcc' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(248,159,204,0.25)' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+
+                },
+                data: [150, 232, 201, 154, 190, 330, 410, 232, 201, 154, 190, 330, 410, 113]
+            }
+        ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChartyhxwfx.setOption(optionyhxwfx);
+    //用户行为分析折线图结束
+</script>
+</body>
+</html>

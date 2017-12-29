@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>用户行为分析</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/layui.css" media="all">
+</head>
+<body>
+
+<div class="wrap">
+    <div class="left-content">
+        <div class="logo">
+            <img src="../image/logo.png" alt="">
+        </div>
+        <div class="list">
+            <div class="container">
+                <div class="leftsidebar_box">
+                    <div class="line"></div>
+                    <dl class="system_log">
+                        <dt>概况<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="../概况分析/概况分析.html">概括分析</a></dd>
+                        <dd><a href="../概况分析/用户观看频次.html">用户观看频次</a></dd>
+                        <dd><a href="../概况分析/新增用户趋势.html">新增用户分析</a></dd>
+                        <dd><a href="../概况分析/用户行为分析.html">用户行为分析</a></dd>
+                    </dl>
+
+                    <dl class="custom">
+                        <dt>实时数据分析<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="../概况分析/实时数据分析.html">实时数据分析</a></dd>
+                    </dl>
+
+                    <dl class="channel">
+                        <dt>内容分析<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="../内容分析/内容分析.html">内容分析</a></dd>
+                        <dd><a href="../内容分析/运营日报.html">运营日报</a></dd>
+                        <dd><a href="../用户分析/活动分析.html">活动分析</a></dd>
+                        <dd><a href="../内容分析/栏目分析.html">栏目分析</a></dd>
+                    </dl>
+
+                    <dl class="app">
+                        <dt>用户分析<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="../内容分析/用户标签.html">用户标签</a></dd>
+                        <dd><a href="#">用户分析</a></dd>
+                        <dd><a href="#">用户画像</a></dd>
+                        <dd><a href="#">用户留存分析</a></dd>
+                    </dl>
+
+                    <dl class="cloud">
+                        <dt>产品分析<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="../产品分析/产品分析.html">产品分析</a></dd>
+                    </dl>
+
+                    <dl class="syetem_management">
+                        <dt>数据预测<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="../数据预测/数据预测.html">数据预测</a></dd>
+                    </dl>
+
+                    <dl class="source">
+                        <dt>运营工具<img src="../image/xiala2.png"></dt>
+                        <dd class="first_dd"><a href="#">漏斗分析</a></dd>
+                        <dd><a href="#">矩阵分析</a></dd>
+                        <dd><a href="#">自定义表格</a></dd>
+                    </dl>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="right-content">
+        <div class="header">
+            <div class="header-left">
+                <img src="../image/top.png" alt="">
+                <h3>概括分析</h3>
+            </div>
+            <div class="header-right">
+                <div class="login">
+                    <img class="login-img" src="../image/setting.png" alt="">
+                    <b class="login-span">EN</b>
+                    <b class="login-span">&nbsp;/&nbsp;</b>
+                    <b class="login-span">中文</b>
+                    <img src="../image/login.png" alt="">
+                    <span>admin...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mid-content">
+        <div class="new-c">
+            <div class="new-c-title">
+                <p>用户行为分析</p>
+                <div class="new-c-time"></div>
+                <form action="" class="new-c-type">
+                    <label for="">终端</label>
+                    <select>
+                        <option value="">全部</option>
+                    </select>
+                    <label for="">机型</label>
+                    <select>
+                        <option value="">全部</option>
+                    </select>
+                    <label for="">版本</label>
+                    <select>
+                        <option value="">全部</option>
+                    </select>
+                </form>
+            </div>
+            <div id="yhxwfx" class="new-c-content"></div>
+            <div class="new-c-type-bottom">
+                <ul class="new-c-list">
+                    <li>
+                        <img src="../image/k1.png" alt="">
+                        <p>K1</p>
+                    </li>
+                    <li>
+                        <img src="../image/k2.png" alt="">
+                        <p>K2</p>
+                    </li>
+                    <li>
+                        <img src="../image/k3.png" alt="">
+                        <p>K3</p>
+                    </li>
+                    <li>
+                        <img src="../image/a1.png" alt="">
+                        <p>A1</p>
+                    </li>
+                    <li>
+                        <img src="../image/a2.png" alt="">
+                        <p>A2</p>
+                    </li>
+                    <li>
+                        <img src="../image/a3.png" alt="">
+                        <p>A3</p>
+                    </li>
+                    <li>
+                        <img src="../image/s1.png" alt="">
+                        <p>S1</p>
+                    </li>
+                    <li>
+                        <img src="../image/s2.png" alt="">
+                        <p>S2</p>
+                    </li>
+                    <li>
+                        <img src="../image/s3.png" alt="">
+                        <p>S3</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="new-c-fenxi">
+            <div class="new-fenxi-title">
+                <div class="download-icon2">
+                    <a href="#">
+                        <img src="../image/xiazai.png" alt="">
+                    </a>
+                </div>
+                <p>趋势分析</p>
+            </div>
+            <div class="new-c-table">
+                <table class="fenxi-table-3" cellpadding="0" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <td>终端</td>
+                        <td>机型</td>
+                        <td>版本</td>
+                        <td>启动次数</td>
+                        <td>单次使用时长</td>
+                        <td>人均浏览量</td>
+                        <td>人均启动次数</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>18911234567</td>
+                        <td>pad</td>
+                        <td>pad</td>
+                        <td>
+                            2016/09/12 21:00<br>
+                            2016/09/13 00:00
+                        </td>
+                        <td>25min</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>18911234567</td>
+                        <td>pad</td>
+                        <td>pad</td>
+                        <td>
+                            2016/09/12 21:00<br>
+                            2016/09/13 00:00
+                        </td>
+                        <td>25min</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>18911234567</td>
+                        <td>pad</td>
+                        <td>pad</td>
+                        <td>
+                            2016/09/12 21:00<br>
+                            2016/09/13 00:00
+                        </td>
+                        <td>25min</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>18911234567</td>
+                        <td>pad</td>
+                        <td>pad</td>
+                        <td>
+                            2016/09/12 21:00<br>
+                            2016/09/13 00:00
+                        </td>
+                        <td>25min</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>18911234567</td>
+                        <td>pad</td>
+                        <td>pad</td>
+                        <td>
+                            2016/09/12 21:00<br>
+                            2016/09/13 00:00
+                        </td>
+                        <td>25min</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>18911234567</td>
+                        <td>pad</td>
+                        <td>pad</td>
+                        <td>
+                            2016/09/12 21:00<br>
+                            2016/09/13 00:00
+                        </td>
+                        <td>25min</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>18911234567</td>
+                        <td>pad</td>
+                        <td>pad</td>
+                        <td>
+                            2016/09/12 21:00<br>
+                            2016/09/13 00:00
+                        </td>
+                        <td>25min</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>18911234567</td>
+                        <td>pad</td>
+                        <td>pad</td>
+                        <td>
+                            2016/09/12 21:00<br>
+                            2016/09/13 00:00
+                        </td>
+                        <td>25min</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>18911234567</td>
+                        <td>pad</td>
+                        <td>pad</td>
+                        <td>
+                            2016/09/12 21:00<br>
+                            2016/09/13 00:00
+                        </td>
+                        <td>25min</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>18911234567</td>
+                        <td>pad</td>
+                        <td>pad</td>
+                        <td>
+                            2016/09/12 21:00<br>
+                            2016/09/13 00:00
+                        </td>
+                        <td>25min</td>
+                        <td>4</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div id="demo7" class="fenye"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/layui.js" charset="utf-8"></script>
+<script src="../js/ECharts.js"></script>
+<script type="text/javascript">
+
+    var lh = $(document.body).height();
+    $(".left-content").css({
+        height: lh,
+    })
+
+    $(".fenxi-table-3 thead tr td").eq(4).css({
+        width: "200px",
+    })
+    $(".fenxi-table-3 thead tr td").eq(5).css({
+        width: "200px"
+    })
+    $(".fenxi-table-3 thead tr td").eq(6).css({
+        width: "200px"
+    })
+    $(".fenxi-table-3 thead tr").css({
+        background: "#fafafa"
+    })
+    $(".fenxi-table-3 tbody tr:odd").css({
+        background: "#fafafa"
+    })
+
+    $(".leftsidebar_box dt img").attr("src", "../image/xiala2.png");
+    $(function () {
+        $(".leftsidebar_box dd").hide();
+        $(".leftsidebar_box dt").click(function () {
+//                        $(".leftsidebar_box dd").css({"background":"#f0f4f8","color":"#36a0f7"})
+            $(this).css({"color": "black"})
+            $(this).parent().find('dd').removeClass("menu_chioce");
+            $(".leftsidebar_box dt img").attr("src", "../image/xiala2.png");
+            $(this).parent().find('img').attr("src", "../image/xiala2.png");
+            $(".menu_chioce").slideUp();
+            $(this).parent().find('dd').slideToggle();
+            $(this).parent().find('dd').addClass("menu_chioce");
+        });
+    })
+</script>
+<script>
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+                ,layer = layui.layer;
+        //完整功能
+        laypage.render({
+            elem: 'demo7'
+            ,count: 45
+            ,layout: ['count', 'limit','prev', 'page', 'next']
+            ,jump: function(obj){
+//                console.log(obj)
+                $(".layui-laypage-prev").css({
+                    background:'url("../image/zuo.png") no-repeat center'
+                })
+                $(".layui-laypage-next").css({
+                    background:'url("../image/you.png") no-repeat center'
+                })
+            }
+        });
+
+    });
+
+</script>
+<script type="text/javascript">
+    //用户行为分析折线图开始
+    // 基于准备好的dom，初始化echarts实例
+    var myChartyhxwfx = echarts.init(document.getElementById('yhxwfx'));
+
+    // 指定图表的配置项和数据
+    var optionyhxwfx = {
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis',
+            //axisPointer: {
+            // type: 'cross',
+            // label: {
+            //    backgroundColor: '#6a7985'
+            // }
+            // }
+        },
+        legend: {
+            top: 36,
+            itemGap: 62,
+            data: [{name: '启动次数', icon: 'emptyCircle'}, {name: '单次使用时长', icon: 'emptyCircle'}, {
+                name: '人均浏览量',
+                icon: 'emptyCircle'
+            }, {name: '人均启动次数', icon: 'emptyCircle'}]
+        },
+        toolbox: {
+            show: false,
+            feature: {
+                dataView: {}
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '10%',
+            top: '30%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                axisLine: {show: false},
+                axisTick: {show: false},
+                offset: 20,
+                type: 'category',
+                boundaryGap: true,
+                data: ['2017/6/1', '2017/6/2', '2017/6/3', '2017/6/4', '2017/6/5', '2017/6/6', '2017/6/7', '2017/6/8', '2017/6/9', '2017/6/10', '2017/6/11', '2017/6/12', '2017/6/13', '2017/6/14']
+            }
+        ],
+        yAxis: [
+            {
+                axisLine: {show: false},
+                axisTick: {show: false},
+                offset: 6,
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '启动次数',
+                type: 'line',
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: '#80beff',
+                        lineStyle: {
+                            width: 3,
+                            color: '#80beff'
+                        }
+                    },
+                    emphasis: {
+                        color: {
+                            type: 'radial',
+                            x: 0.5,
+                            y: 0.5,
+                            r: 0.5,
+                            colorStops: [{
+                                offset: 0, color: '#80beff' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(128,190,255,0.25)' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+
+                },
+                data: [120, 132, 101, 134, 90, 230, 210, 132, 101, 134, 90, 230, 210, 189]
+            },
+            {
+                name: '单次使用时长',
+                type: 'line',
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: '#80beff',
+                        lineStyle: {
+                            width: 3,
+                            color: '#80beff'
+                        }
+                    },
+                    emphasis: {
+                        color: {
+                            type: 'radial',
+                            x: 0.5,
+                            y: 0.5,
+                            r: 0.5,
+                            colorStops: [{
+                                offset: 0, color: '#80beff' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(128,190,255,0.25)' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+
+                },
+                data: [125, 133, 108, 174, 190, 239, 219, 152, 181, 134, 180, 235, 219, 199]
+            },
+            {
+                name: '人均浏览量',
+                type: 'line',
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: '#cabaf7',
+                        lineStyle: {
+                            width: 3,
+                            color: '#cabaf7'
+                        }
+                    },
+                    emphasis: {
+                        color: {
+                            type: 'radial',
+                            x: 0.5,
+                            y: 0.5,
+                            r: 0.5,
+                            colorStops: [{
+                                offset: 0, color: '#cabaf7' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(202,186,247,0.25)' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+
+                },
+                data: [220, 182, 191, 234, 290, 330, 310, 182, 191, 234, 290, 330, 310, 176]
+            },
+            {
+                name: '人均启动次数',
+                type: 'line',
+                symbol: 'circle',
+                itemStyle: {
+                    normal: {
+                        color: '#f89fcc',
+                        lineStyle: {
+                            width: 3,
+                            color: '#f89fcc'
+                        }
+                    },
+                    emphasis: {
+                        color: {
+                            type: 'radial',
+                            x: 0.5,
+                            y: 0.5,
+                            r: 0.5,
+                            colorStops: [{
+                                offset: 0, color: '#f89fcc' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(248,159,204,0.25)' // 100% 处的颜色
+                            }],
+                            globalCoord: false // 缺省为 false
+                        }
+                    }
+
+                },
+                data: [150, 232, 201, 154, 190, 330, 410, 232, 201, 154, 190, 330, 410, 113]
+            }
+        ]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChartyhxwfx.setOption(optionyhxwfx);
+    //用户行为分析折线图结束
+</script>
+</body>
+</html>
